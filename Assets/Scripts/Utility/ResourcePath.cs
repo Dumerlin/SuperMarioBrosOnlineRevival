@@ -7,6 +7,11 @@ using UnityEngine;
 /// </summary>
 public static class ResourcePath
 {
+    public class Sprites
+    {
+        public const string SpritePath = "Sprites/";
+    }
+
     public static class Audio
     {
         public const string MusicPath = "Audio/Music/";

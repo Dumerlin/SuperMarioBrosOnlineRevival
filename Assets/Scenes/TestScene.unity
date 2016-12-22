@@ -185,6 +185,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114022047647982048, guid: 593020b9a7145a6458624ed9697371ed,
+        type: 2}
+      propertyPath: IdleSprites.Array.size
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4040705636206746, guid: 593020b9a7145a6458624ed9697371ed, type: 2}
       propertyPath: m_LocalPosition.x
       value: 2.0160177
@@ -217,6 +222,93 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 114391665649811064, guid: 593020b9a7145a6458624ed9697371ed,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212439743067197492, guid: 593020b9a7145a6458624ed9697371ed,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300022, guid: e34a2dd54e347454d83c5e39a9c41a93,
+        type: 3}
+    - target: {fileID: 114022047647982048, guid: 593020b9a7145a6458624ed9697371ed,
+        type: 2}
+      propertyPath: IdleSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300008, guid: e34a2dd54e347454d83c5e39a9c41a93,
+        type: 3}
+    - target: {fileID: 114022047647982048, guid: 593020b9a7145a6458624ed9697371ed,
+        type: 2}
+      propertyPath: IdleSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300006, guid: e34a2dd54e347454d83c5e39a9c41a93,
+        type: 3}
+    - target: {fileID: 114022047647982048, guid: 593020b9a7145a6458624ed9697371ed,
+        type: 2}
+      propertyPath: IdleSprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300004, guid: e34a2dd54e347454d83c5e39a9c41a93,
+        type: 3}
+    - target: {fileID: 114022047647982048, guid: 593020b9a7145a6458624ed9697371ed,
+        type: 2}
+      propertyPath: IdleSprites.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300002, guid: e34a2dd54e347454d83c5e39a9c41a93,
+        type: 3}
+    - target: {fileID: 114022047647982048, guid: 593020b9a7145a6458624ed9697371ed,
+        type: 2}
+      propertyPath: IdleSprites.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: e34a2dd54e347454d83c5e39a9c41a93,
+        type: 3}
+    - target: {fileID: 212439743067197492, guid: 593020b9a7145a6458624ed9697371ed,
+        type: 2}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114022047647982048, guid: 593020b9a7145a6458624ed9697371ed,
+        type: 2}
+      propertyPath: IdleSprites.Array.data[7]
+      value: 
+      objectReference: {fileID: 21300006, guid: e34a2dd54e347454d83c5e39a9c41a93,
+        type: 3}
+    - target: {fileID: 114022047647982048, guid: 593020b9a7145a6458624ed9697371ed,
+        type: 2}
+      propertyPath: IdleSprites.Array.data[6]
+      value: 
+      objectReference: {fileID: 21300004, guid: e34a2dd54e347454d83c5e39a9c41a93,
+        type: 3}
+    - target: {fileID: 114022047647982048, guid: 593020b9a7145a6458624ed9697371ed,
+        type: 2}
+      propertyPath: IdleSprites.Array.data[5]
+      value: 
+      objectReference: {fileID: 21300002, guid: e34a2dd54e347454d83c5e39a9c41a93,
+        type: 3}
+    m_RemovedComponents:
+    - {fileID: 114391665649811064, guid: 593020b9a7145a6458624ed9697371ed, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 593020b9a7145a6458624ed9697371ed, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &984627251 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1717070311881684, guid: 593020b9a7145a6458624ed9697371ed,
+    type: 2}
+  m_PrefabInternal: {fileID: 984627250}
+--- !u!95 &984627252
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 984627251}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 060c03d23af6e6d4d91b151c00c78e03, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1

@@ -7,10 +7,20 @@ using UnityEngine;
 /// </summary>
 public class PlayerMovement : MonoBehaviour
 {
+    public delegate void DirectionChanged();
+
+    /// <summary>
+    /// The event for when the player changes directions.
+    /// This isn't called if the direction was changed and the player was already facing that direction.
+    /// </summary>
+    public event DirectionChanged DirectionChangedEvent = null;
+
     public enum FacingDirections
     {
         North, NorthEast, East, SouthEast, South, SouthWest, West, NorthWest
     }
+
+    protected Animator m_Animator = null;
 
     /// <summary>
     /// Character speed.
@@ -22,9 +32,22 @@ public class PlayerMovement : MonoBehaviour
     /// </summary>
     public FacingDirections FacingDirection = FacingDirections.South;
 
+    //North, NorthEast, East, SouthEast, South, SouthWest, West, NorthWest in that order
+    public Sprite[] IdleSprites = new Sprite[0];
+
+    protected void Awake()
+    {
+        m_Animator = GetComponent<Animator>();
+    }
+
+    private void OnDestroy()
+    {
+        DirectionChangedEvent = null;
+    }
+    Vector3 diff = Vector3.zero;
     private void Update()
     {
-        Vector3 diff = Vector3.zero;
+        diff = Vector3.zero;
 
         if (Input.GetKey(KeyCode.UpArrow) == true)
         {
@@ -43,12 +66,46 @@ public class PlayerMovement : MonoBehaviour
             diff.x = Speed;
         }
 
-        FacingDirection = SetDirectionFromSpeed(new Vector2(diff.x, diff.y));
+        m_Animator.SetFloat("SpeedX", diff.x);
+        m_Animator.SetFloat("SpeedY", diff.y);
+
+        ChangeDirection(GetDirectionFromSpeed(new Vector2(diff.x, diff.y)));
+
+        GetComponent<SpriteRenderer>().flipX = FacingDirection > FacingDirections.South;
+
+        //if (diff.x == 0f && diff.y == 0f)
+        //{
+        //    GetComponent<SpriteRenderer>().sprite = IdleSprites[(int)FacingDirection];
+        //    GetComponent<SpriteRenderer>().flipX = FacingDirection > FacingDirections.South;
+        //}
 
         transform.position += diff;
     }
 
-    private FacingDirections SetDirectionFromSpeed(Vector2 speed)
+    private void LateUpdate()
+    {
+        if (diff.x == 0f && diff.y == 0f)
+        {
+            GetComponent<SpriteRenderer>().sprite = IdleSprites[(int)FacingDirection];
+        }
+    }
+
+    /// <summary>
+    /// Changes the direction the player is facing.
+    /// </summary>
+    /// <param name="newDirection">The new direction for the player to face.</param>
+    public void ChangeDirection(FacingDirections newDirection)
+    {
+        if (FacingDirection != newDirection)
+        {
+            if (DirectionChangedEvent != null)
+                DirectionChangedEvent();
+        }
+
+        FacingDirection = newDirection;
+    }
+
+    private FacingDirections GetDirectionFromSpeed(Vector2 speed)
     {
         //Moving left
         if (speed.x < 0)
