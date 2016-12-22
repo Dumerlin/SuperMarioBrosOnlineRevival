@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4040705636206746}
   - component: {fileID: 212439743067197492}
   - component: {fileID: 114022047647982048}
+  - component: {fileID: 114391665649811064}
   m_Layer: 0
   m_Name: Test Character
   m_TagString: Untagged
@@ -53,6 +54,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 0.1
+  FacingDirection: 4
+--- !u!114 &114391665649811064
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1717070311881684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 188d78d3fc09d2a4b8ee037d40b01244, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Sprites:
+  - {fileID: 21300048, guid: e34a2dd54e347454d83c5e39a9c41a93, type: 3}
+  - {fileID: 21300050, guid: e34a2dd54e347454d83c5e39a9c41a93, type: 3}
+  - {fileID: 21300052, guid: e34a2dd54e347454d83c5e39a9c41a93, type: 3}
+  - {fileID: 21300054, guid: e34a2dd54e347454d83c5e39a9c41a93, type: 3}
+  - {fileID: 21300056, guid: e34a2dd54e347454d83c5e39a9c41a93, type: 3}
+  - {fileID: 21300058, guid: e34a2dd54e347454d83c5e39a9c41a93, type: 3}
+  - {fileID: 21300060, guid: e34a2dd54e347454d83c5e39a9c41a93, type: 3}
+  - {fileID: 21300062, guid: e34a2dd54e347454d83c5e39a9c41a93, type: 3}
+  FramesPerSprite: 6
 --- !u!212 &212439743067197492
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -84,7 +107,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: e34a2dd54e347454d83c5e39a9c41a93, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
