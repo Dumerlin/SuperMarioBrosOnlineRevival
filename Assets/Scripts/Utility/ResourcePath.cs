@@ -9,9 +9,11 @@ public static class ResourcePath
 {
     public static class AnimationStrings
     {
+        //Overworld
         public const string IdleAnim = "Idle";
         public const string WalkingAnim = "Walking";
         public const string JumpAnim = "Jump";
+        public const string GetItem = "GetItem";
     }
 
     public static class Sprites

@@ -63,7 +63,13 @@ public sealed class AnimationPlayer : MonoBehaviour
     {
         if (newAnimation == null)
         {
-            Debug.LogWarning("null AnimationData passed to AnimationPlayer.SetData. Not playing animation");
+            Debug.LogWarning("null AnimationData passed to SetData. Not playing animation");
+            return;
+        }
+
+        if (newAnimation[direction] == null || newAnimation[direction].Length == 0)
+        {
+            Debug.LogWarning("animation " + newAnimation.AnimName + " has no direction data for " + direction + ". Not playing animation");
             return;
         }
 

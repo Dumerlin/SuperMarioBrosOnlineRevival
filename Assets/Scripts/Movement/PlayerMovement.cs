@@ -21,52 +21,69 @@ public class PlayerMovement : MonoBehaviour
     /// </summary>
     public PlayerDirection playerDirection = null;
 
+    /// <summary>
+    /// The amount the player previously moved.
+    /// </summary>
+    private Vector3 PrevMoveAmt = Vector3.zero;
+
+    /// <summary>
+    /// The amount the player currently moved.
+    /// </summary>
+    private Vector3 CurMoveAmt = Vector3.zero;
+
     protected void Awake()
     {
         AnimManager = GetComponent<AnimationManager>();
         playerDirection = GetComponent<PlayerDirection>();
     }
 
-    Vector3 diff = Vector3.zero;
     private void Update()
     {
-        diff = Vector3.zero;
+        PrevMoveAmt = CurMoveAmt;
+
+        CurMoveAmt = Vector3.zero;
 
         if (Input.GetKey(KeyCode.UpArrow) == true)
         {
-            diff.y = Speed;
+            CurMoveAmt.y = Speed;
         }
         if (Input.GetKey(KeyCode.DownArrow) == true)
         {
-            diff.y = -Speed;
+            CurMoveAmt.y = -Speed;
         }
         if (Input.GetKey(KeyCode.LeftArrow) == true)
         {
-            diff.x = -Speed;
+            CurMoveAmt.x = -Speed;
         }
         if (Input.GetKey(KeyCode.RightArrow) == true)
         {
-            diff.x = Speed;
+            CurMoveAmt.x = Speed;
         }
 
         //Set the direction to face
-        playerDirection.SetDirection(GetDirectionFromSpeed(new Vector2(diff.x, diff.y)));
+        playerDirection.SetDirection(GetDirectionFromSpeed(new Vector2(CurMoveAmt.x, CurMoveAmt.y)));
 
-        if (diff.x != 0f || diff.y != 0f)
+        if (CurMoveAmt != PrevMoveAmt)
         {
-            AnimManager.PlayAnimation(ResourcePath.AnimationStrings.WalkingAnim, playerDirection.CurDirection);
-        }
-        else
-        {
-            AnimManager.PlayAnimation(ResourcePath.AnimationStrings.IdleAnim, playerDirection.CurDirection);
+            if (CurMoveAmt.x != 0f || CurMoveAmt.y != 0f)
+            {
+                AnimManager.PlayAnimation(ResourcePath.AnimationStrings.WalkingAnim, playerDirection.CurDirection);
+            }
+            else
+            {
+                AnimManager.PlayAnimation(ResourcePath.AnimationStrings.IdleAnim, playerDirection.CurDirection);
+            }
         }
 
-        transform.position += diff;
+        //Testing new animation
+        if (Input.GetKeyDown(KeyCode.T)) AnimManager.PlayAnimation(ResourcePath.AnimationStrings.GetItem, playerDirection.CurDirection);
+
+        transform.position += CurMoveAmt;
     }
 
     private void LateUpdate()
     {
-        if (diff.x == 0f && diff.y == 0f)
+        if (CurMoveAmt.x == 0f && CurMoveAmt.y == 0f)
         {
             //GetComponent<SpriteRenderer>().sprite = IdleSprites[(int)FacingDirection];
         }

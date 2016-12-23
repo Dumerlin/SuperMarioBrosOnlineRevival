@@ -13,6 +13,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AnimName: Idle
   FramesPerSprite: 6
+  Loop: 0
+  LoopTimes: 0
   North:
   - Sprite: {fileID: 21300008, guid: e34a2dd54e347454d83c5e39a9c41a93, type: 3}
     Flipped: 0
