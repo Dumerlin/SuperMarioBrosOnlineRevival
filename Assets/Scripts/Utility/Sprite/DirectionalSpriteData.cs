@@ -22,21 +22,21 @@ public class DirectionalSpriteData : AnimationData
     public FrameData[] NorthWest = null;
 
     //Return the appropriate array based off the direction
-    public override FrameData[] this[PlayerMovement.FacingDirections direction]
+    public override FrameData[] this[PlayerDirection.FacingDirections direction]
     {
         get
         {
             switch (direction)
             {
-                case PlayerMovement.FacingDirections.North: return North;
-                case PlayerMovement.FacingDirections.NorthEast: return NorthEast;
-                case PlayerMovement.FacingDirections.East: return East;
-                case PlayerMovement.FacingDirections.SouthEast: return SouthEast;
+                case PlayerDirection.FacingDirections.North: return North;
+                case PlayerDirection.FacingDirections.NorthEast: return NorthEast;
+                case PlayerDirection.FacingDirections.East: return East;
+                case PlayerDirection.FacingDirections.SouthEast: return SouthEast;
                 default:
-                case PlayerMovement.FacingDirections.South: return South;
-                case PlayerMovement.FacingDirections.SouthWest: return SouthWest;
-                case PlayerMovement.FacingDirections.West: return West;
-                case PlayerMovement.FacingDirections.NorthWest: return NorthWest;
+                case PlayerDirection.FacingDirections.South: return South;
+                case PlayerDirection.FacingDirections.SouthWest: return SouthWest;
+                case PlayerDirection.FacingDirections.West: return West;
+                case PlayerDirection.FacingDirections.NorthWest: return NorthWest;
             }
         }
     }

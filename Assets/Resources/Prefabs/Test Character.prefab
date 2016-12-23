@@ -20,8 +20,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4040705636206746}
   - component: {fileID: 212439743067197492}
+  - component: {fileID: 114019061976117284}
   - component: {fileID: 114022047647982048}
-  - component: {fileID: 114391665649811064}
+  - component: {fileID: 114771653579177184}
+  - component: {fileID: 114630093374982822}
   m_Layer: 0
   m_Name: Test Character
   m_TagString: Untagged
@@ -42,6 +44,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114019061976117284
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1717070311881684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94838110701df4e41b4a561c76597a59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114022047647982048
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -54,8 +67,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 0.1
-  FacingDirection: 4
---- !u!114 &114391665649811064
+  playerDirection: {fileID: 114019061976117284}
+--- !u!114 &114630093374982822
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -63,19 +76,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 1717070311881684}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 188d78d3fc09d2a4b8ee037d40b01244, type: 3}
+  m_Script: {fileID: 11500000, guid: ca00d44ff2f4f5c4c91ab6d20bff5868, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sprites:
-  - {fileID: 21300048, guid: e34a2dd54e347454d83c5e39a9c41a93, type: 3}
-  - {fileID: 21300050, guid: e34a2dd54e347454d83c5e39a9c41a93, type: 3}
-  - {fileID: 21300052, guid: e34a2dd54e347454d83c5e39a9c41a93, type: 3}
-  - {fileID: 21300054, guid: e34a2dd54e347454d83c5e39a9c41a93, type: 3}
-  - {fileID: 21300056, guid: e34a2dd54e347454d83c5e39a9c41a93, type: 3}
-  - {fileID: 21300058, guid: e34a2dd54e347454d83c5e39a9c41a93, type: 3}
-  - {fileID: 21300060, guid: e34a2dd54e347454d83c5e39a9c41a93, type: 3}
-  - {fileID: 21300062, guid: e34a2dd54e347454d83c5e39a9c41a93, type: 3}
-  FramesPerSprite: 6
+--- !u!114 &114771653579177184
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1717070311881684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b69401486a8b2a4f93f536b8b974431, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AnimationPath: Sprites/Animations/Mario/
 --- !u!212 &212439743067197492
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -107,7 +122,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e34a2dd54e347454d83c5e39a9c41a93, type: 3}
+  m_Sprite: {fileID: 21300022, guid: e34a2dd54e347454d83c5e39a9c41a93, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

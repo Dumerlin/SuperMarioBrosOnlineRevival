@@ -9,25 +9,40 @@ using UnityEngine;
 public abstract class AnimationData : ScriptableObject
 {
     /// <summary>
+    /// The constant dictating when an animation should loop infinitely
+    /// </summary>
+    public const int INFINITE_LOOP = 0;
+
+    /// <summary>
+    /// The name of the Animation.
+    /// </summary>
+    public string AnimName = string.Empty;
+
+    /// <summary>
     /// The number of frames to display each Sprite.
     /// This sets the rate at which the animation plays.
     /// </summary>
     public int FramesPerSprite = 6;
 
     /// <summary>
-    /// Whether the animation should flip the Sprites or not.
+    /// Whether to loop the animation or not.
     /// </summary>
-    //public bool Flipped = false;
+    public bool Loop = false;
+
+    /// <summary>
+    /// How many time to loop the animation if it loops.
+    /// </summary>
+    public int LoopTimes = INFINITE_LOOP;
 
     /// <summary>
     /// Gets a FrameData array from a direction.
     /// </summary>
     /// <param name="direction"></param>
     /// <returns></returns>
-    public abstract FrameData[] this[PlayerMovement.FacingDirections direction] { get; }
+    public abstract FrameData[] this[PlayerDirection.FacingDirections direction] { get; }
 
     [Serializable]
-    public struct FrameData
+    public class FrameData
     {
         /// <summary>
         /// The sprite of this frame.

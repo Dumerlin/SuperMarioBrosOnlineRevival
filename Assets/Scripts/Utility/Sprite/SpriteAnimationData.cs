@@ -14,7 +14,7 @@ public class SpriteAnimationData : AnimationData
     /// </summary>
     public FrameData[] Frames = null;
 
-    public override FrameData[] this[PlayerMovement.FacingDirections direction]
+    public override FrameData[] this[PlayerDirection.FacingDirections direction]
     {
         //Always return these sprites regardless of direction
         get { return Frames; }
