@@ -7,7 +7,14 @@ using UnityEngine;
 /// </summary>
 public static class ResourcePath
 {
-    public class Sprites
+    public static class AnimationStrings
+    {
+        public const string IdleAnim = "Idle";
+        public const string WalkingAnim = "Walking";
+        public const string JumpAnim = "Jump";
+    }
+
+    public static class Sprites
     {
         public const string SpritePath = "Sprites/";
     }
