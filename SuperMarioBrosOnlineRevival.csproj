@@ -52,6 +52,9 @@
     <Reference Include="UnityEngine">
       <HintPath>Library\UnityAssemblies\UnityEngine.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.Advertisements">
+      <HintPath>Library\UnityAssemblies\UnityEngine.Advertisements.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
@@ -67,6 +70,9 @@
     <Reference Include="UnityEngine.HoloLens">
       <HintPath>Library\UnityAssemblies\UnityEngine.HoloLens.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.Purchasing">
+      <HintPath>Library\UnityAssemblies\UnityEngine.Purchasing.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.VR">
       <HintPath>Library\UnityAssemblies\UnityEngine.VR.dll</HintPath>
     </Reference>
@@ -79,7 +85,9 @@
     <Compile Include="Assets\Scripts\Singletons\AudioManager.cs" />
     <Compile Include="Assets\Scripts\Singletons\Singleton.cs" />
     <Compile Include="Assets\Scripts\Utility\ResourcePath.cs" />
+    <Compile Include="Assets\Scripts\Utility\Sprite\AnimationData.cs" />
     <Compile Include="Assets\Scripts\Utility\Sprite\AnimationManager.cs" />
+    <Compile Include="Assets\Scripts\Utility\Sprite\DirectionalSpriteData.cs" />
     <Compile Include="Assets\Scripts\Utility\Sprite\SpriteAnimation.cs" />
     <Compile Include="Assets\Scripts\Utility\Sprite\SpriteAnimationData.cs" />
   </ItemGroup>

@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0d369dd99f0cee44b8064f10d7dd9d2, type: 3}
+  m_Name: MarioIdle
+  m_EditorClassIdentifier: 
+  FramesPerSprite: 6
+  North:
+  - Sprite: {fileID: 21300008, guid: e34a2dd54e347454d83c5e39a9c41a93, type: 3}
+    Flipped: 0
+  NorthEast:
+  - Sprite: {fileID: 21300006, guid: e34a2dd54e347454d83c5e39a9c41a93, type: 3}
+    Flipped: 0
+  East:
+  - Sprite: {fileID: 21300004, guid: e34a2dd54e347454d83c5e39a9c41a93, type: 3}
+    Flipped: 0
+  SouthEast:
+  - Sprite: {fileID: 21300002, guid: e34a2dd54e347454d83c5e39a9c41a93, type: 3}
+    Flipped: 0
+  South:
+  - Sprite: {fileID: 21300000, guid: e34a2dd54e347454d83c5e39a9c41a93, type: 3}
+    Flipped: 0
+  SouthWest:
+  - Sprite: {fileID: 21300002, guid: e34a2dd54e347454d83c5e39a9c41a93, type: 3}
+    Flipped: 1
+  West:
+  - Sprite: {fileID: 21300004, guid: e34a2dd54e347454d83c5e39a9c41a93, type: 3}
+    Flipped: 1
+  NorthWest:
+  - Sprite: {fileID: 21300006, guid: e34a2dd54e347454d83c5e39a9c41a93, type: 3}
+    Flipped: 1

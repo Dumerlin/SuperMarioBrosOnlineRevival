@@ -1,26 +1,22 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System;
 
 /// <summary>
 /// Stores animation data.
 /// </summary>
 [CreateAssetMenu(fileName = "SpriteAnimationData", menuName = "SMBO/Create Sprite Animation Data")]
-public class SpriteAnimationData : ScriptableObject
+public class SpriteAnimationData : AnimationData
 {
     /// <summary>
     /// The set of sprites.
     /// </summary>
-    public Sprite[] Sprites = null;
+    public FrameData[] Frames = null;
 
-    /// <summary>
-    /// The number of frames to display each Sprite.
-    /// This sets the rate at which the animation plays.
-    /// </summary>
-    public int FramesPerSprite = 6;
-
-    /// <summary>
-    /// Whether the animation should flip the Sprites or not.
-    /// </summary>
-    public bool Flipped = false;
+    public override FrameData[] this[PlayerMovement.FacingDirections direction]
+    {
+        //Always return these sprites regardless of direction
+        get { return Frames; }
+    }
 }
