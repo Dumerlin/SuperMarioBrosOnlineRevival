@@ -9,7 +9,7 @@ using UnityEngine;
 [DisallowMultipleComponent]
 public class PlayerMovement : MonoBehaviour
 {
-    private AnimationManager AnimManager = null;
+    private AnimStateMachine animStateMachine = null;
 
     /// <summary>
     /// Character speed.
@@ -33,7 +33,7 @@ public class PlayerMovement : MonoBehaviour
 
     protected void Awake()
     {
-        AnimManager = GetComponent<AnimationManager>();
+        animStateMachine = GetComponent<AnimStateMachine>();
         playerDirection = GetComponent<PlayerDirection>();
     }
 
@@ -63,20 +63,23 @@ public class PlayerMovement : MonoBehaviour
         //Set the direction to face
         playerDirection.SetDirection(GetDirectionFromSpeed(new Vector2(CurMoveAmt.x, CurMoveAmt.y)));
 
+        //TODO: Consider aerial states after physics are implemented
+
         if (CurMoveAmt != PrevMoveAmt)
         {
             if (CurMoveAmt.x != 0f || CurMoveAmt.y != 0f)
             {
-                AnimManager.PlayAnimation(ResourcePath.AnimationStrings.WalkingAnim, playerDirection.CurDirection);
+                animStateMachine.Transition(new CharacterStates.WalkingState());
+                //AnimManager.PlayAnimation(ResourcePath.AnimationStrings.WalkingAnim, playerDirection.CurDirection);
             }
             else
             {
-                AnimManager.PlayAnimation(ResourcePath.AnimationStrings.IdleAnim, playerDirection.CurDirection);
+                animStateMachine.Transition(new CharacterStates.IdleState());
             }
         }
 
         //Testing new animation
-        if (Input.GetKeyDown(KeyCode.T)) AnimManager.PlayAnimation(ResourcePath.AnimationStrings.GetItem, playerDirection.CurDirection);
+        //if (Input.GetKeyDown(KeyCode.T)) AnimManager.PlayAnimation(ResourcePath.AnimationStrings.GetItem, playerDirection.CurDirection);
 
         transform.position += CurMoveAmt;
     }

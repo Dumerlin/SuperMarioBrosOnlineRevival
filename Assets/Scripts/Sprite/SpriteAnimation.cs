@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// A simple sprite animation class.
-/// This should be used as a base and be extended with other functionality (namely Characters, as they use different sprites for each direction)
+/// A simple generic sprite animation class for general-use animations.
 /// </summary>
 [RequireComponent(typeof(SpriteRenderer))]
 [DisallowMultipleComponent]

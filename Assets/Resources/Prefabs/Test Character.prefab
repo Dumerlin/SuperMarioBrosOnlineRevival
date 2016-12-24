@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 114022047647982048}
   - component: {fileID: 114771653579177184}
   - component: {fileID: 114630093374982822}
+  - component: {fileID: 114998117477248860}
   m_Layer: 0
   m_Name: Test Character
   m_TagString: Untagged
@@ -91,6 +92,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AnimationPath: Sprites/Animations/Mario/
+--- !u!114 &114998117477248860
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1717070311881684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d2120ed6a39ab544a06988f4ec6ad77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212439743067197492
 SpriteRenderer:
   m_ObjectHideFlags: 1

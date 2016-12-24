@@ -80,14 +80,16 @@
     <Compile Include="Assets\Scripts\Movement\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Singletons\AudioManager.cs" />
     <Compile Include="Assets\Scripts\Singletons\Singleton.cs" />
+    <Compile Include="Assets\Scripts\Sprite\AnimationData.cs" />
+    <Compile Include="Assets\Scripts\Sprite\AnimationManager.cs" />
+    <Compile Include="Assets\Scripts\Sprite\AnimationPlayer.cs" />
+    <Compile Include="Assets\Scripts\Sprite\DirectionalSpriteData.cs" />
+    <Compile Include="Assets\Scripts\Sprite\SpriteAnimation.cs" />
+    <Compile Include="Assets\Scripts\Sprite\SpriteAnimationData.cs" />
+    <Compile Include="Assets\Scripts\StateMachines\AnimStateMachine.cs" />
+    <Compile Include="Assets\Scripts\StateMachines\Character States\CharacterStates.cs" />
     <Compile Include="Assets\Scripts\Utility\Extensions\Extensions.cs" />
     <Compile Include="Assets\Scripts\Utility\ResourcePath.cs" />
-    <Compile Include="Assets\Scripts\Utility\Sprite\AnimationData.cs" />
-    <Compile Include="Assets\Scripts\Utility\Sprite\AnimationManager.cs" />
-    <Compile Include="Assets\Scripts\Utility\Sprite\AnimationPlayer.cs" />
-    <Compile Include="Assets\Scripts\Utility\Sprite\DirectionalSpriteData.cs" />
-    <Compile Include="Assets\Scripts\Utility\Sprite\SpriteAnimation.cs" />
-    <Compile Include="Assets\Scripts\Utility\Sprite\SpriteAnimationData.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

@@ -34,11 +34,17 @@ public class AnimationManager : MonoBehaviour
     /// </summary>
     private AnimationPlayer AnimPlayer = null;
 
+    /// <summary>
+    /// The direction the object is facing.
+    /// </summary>
+    private PlayerDirection playerDirection = null;
+
     private PlayerDirection.FacingDirections PrevDirection = PlayerDirection.FacingDirections.South;
 
     private void Awake()
     {
         AnimPlayer = GetComponent<AnimationPlayer>();
+        playerDirection = GetComponent<PlayerDirection>();
 
         //Load all animations
         AnimationData[] animations = Resources.LoadAll<AnimationData>(AnimationPath);
@@ -59,14 +65,17 @@ public class AnimationManager : MonoBehaviour
     /// Plays an animation by name.
     /// </summary>
     /// <param name="animName">The name of the animation to play.</param>
-    /// <param name="directionFacing">The direction of the animation to play.</param>
-    public void PlayAnimation(string animName, PlayerDirection.FacingDirections directionFacing)
+    //// <param name="directionFacing">The direction of the animation to play.</param>
+    public void PlayAnimation(string animName)
     {
         if (AnimDict.ContainsKey(animName) == false)
         {
             Debug.LogWarning("No animation with name: " + animName + " can be found!");
             return;
         }
+
+        PlayerDirection.FacingDirections directionFacing =
+            (playerDirection != null) ? playerDirection.CurDirection : PlayerDirection.FacingDirections.South;
 
         //Don't reset the current animation if its the same and the direction it's facing is the same
         if (CurrentAnim != null && CurrentAnim.AnimName == animName && PrevDirection == directionFacing) return;
