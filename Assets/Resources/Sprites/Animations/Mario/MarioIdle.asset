@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: MarioIdle
   m_EditorClassIdentifier: 
   AnimName: Idle
-  FramesPerSprite: 6
+  FramesPerSprite: 1
   Loop: 0
   LoopTimes: 0
   North:

@@ -13,6 +13,7 @@ public static class ResourcePath
         public const string IdleAnim = "Idle";
         public const string WalkingAnim = "Walking";
         public const string JumpAnim = "Jump";
+        public const string JumpFallAnim = "JumpFall";
         public const string GetItem = "GetItem";
     }
 

@@ -26,6 +26,7 @@ public class AnimStateMachine : MonoBehaviour
     {
         AnimManager = GetComponent<AnimationManager>();
 
+        //Start out in Idle
         Transition(new CharacterStates.IdleState());
     }
 
@@ -42,6 +43,8 @@ public class AnimStateMachine : MonoBehaviour
         CurState = newState;
         CurState.StateMachine = this;
         CurStateName = CurState.GetType().Name;
+
+        //Debug.Log("Transitioned to: " + CurStateName);
 
         //Enter the new state
         if (CurState != null)

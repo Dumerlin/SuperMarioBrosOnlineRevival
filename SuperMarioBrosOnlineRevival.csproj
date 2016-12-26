@@ -77,7 +77,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Attributes\AddedAtRuntimeAttribute.cs" />
     <Compile Include="Assets\Scripts\Movement\PlayerDirection.cs" />
-    <Compile Include="Assets\Scripts\Movement\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\Movement\PlayerGrounded.cs" />
     <Compile Include="Assets\Scripts\Singletons\AudioManager.cs" />
     <Compile Include="Assets\Scripts\Singletons\Singleton.cs" />
     <Compile Include="Assets\Scripts\Sprite\AnimationData.cs" />

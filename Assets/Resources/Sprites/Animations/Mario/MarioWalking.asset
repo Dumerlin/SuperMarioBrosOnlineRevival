@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: MarioWalking
   m_EditorClassIdentifier: 
   AnimName: Walking
-  FramesPerSprite: 6
+  FramesPerSprite: 4
   Loop: 1
   LoopTimes: 0
   North:
