@@ -13,7 +13,18 @@ public sealed class AudioManager : Singleton<AudioManager>
     /// <summary>
     /// The AudioSource to play the music.
     /// </summary>
-    private AudioSource MusicSource = null;
+    private AudioSource musicSource = null;
+
+    public AudioSource MusicSource
+    {
+        get
+        {
+            if (musicSource == null)
+                musicSource = GetComponent<AudioSource>();
+
+            return musicSource;
+        }
+    }
 
     /// <summary>
     /// The sounds being played. Objects in this list will be reused if they're not currently playing a sound.
@@ -62,7 +73,7 @@ public sealed class AudioManager : Singleton<AudioManager>
     {
         base.Awake();
 
-        MusicSource = GetComponent<AudioSource>();
+        DontDestroyOnLoad(this);
     }
 
     private void Update()
@@ -127,7 +138,7 @@ public sealed class AudioManager : Singleton<AudioManager>
         MusicSource.UnPause();
     }
 
-    public void StopMusic(bool pause)
+    public void StopMusic()
     {
         MusicSource.Stop();
     }

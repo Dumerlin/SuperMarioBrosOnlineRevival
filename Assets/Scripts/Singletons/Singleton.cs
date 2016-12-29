@@ -1,14 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// The base class for Singletons, objects that should have only one instance.
 /// Mostly used for managers.
 /// </summary>
 /// <typeparam name="T">A type derived from MonoBehaviour.</typeparam>
-[DisallowMultipleComponent]
-public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
+public abstract class Singleton<T> : MonoBehaviour where T : MonoBehaviour
 {
     /// <summary>
     /// Gets the instance of this Singleton. If it doesn't exist and can't be found in the scene, it will be created.
@@ -30,6 +30,13 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
 
             //Try to find the instance in the scene
             instance = FindObjectOfType<T>();
+
+            //Try to load from resources if it's not in the scene
+            if (instance == null)
+            {
+                T prefab = Resources.Load<T>("Prefabs/" + typeof(T).Name);
+                instance = Instantiate<T>(prefab);
+            }
 
             //The instance can't be found, so create it
             if (instance == null)
@@ -85,7 +92,7 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
     /// <returns></returns>
     protected bool VerifyInstance()
     {
-        if (this == instance)
+        if (this == Instance)
             return true;
 
         Destroy(this.gameObject);

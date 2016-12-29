@@ -180,6 +180,10 @@ public static class CharacterStates
         public override void Enter()
         {
             base.Enter();
+
+            //Test
+            AudioClip sound = Resources.Load<AudioClip>(ResourcePath.Audio.SFXPath + "Mario_Jump");
+            AudioManager.Instance.PlaySound(sound);
         }
 
         public override void Exit()
