@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d846fa5000b5c646859a8bdfb9e2c39, type: 3}
+  m_Name: MarioDizzy
+  m_EditorClassIdentifier: 
+  AnimName: Dizzy
+  FramesPerSprite: 4
+  Loop: 1
+  LoopTimes: 0
+  Frames:
+  - Sprite: {fileID: 21300606, guid: e34a2dd54e347454d83c5e39a9c41a93, type: 3}
+    Flipped: 0
+  - Sprite: {fileID: 21300608, guid: e34a2dd54e347454d83c5e39a9c41a93, type: 3}
+    Flipped: 0
+  - Sprite: {fileID: 21300610, guid: e34a2dd54e347454d83c5e39a9c41a93, type: 3}
+    Flipped: 0
+  - Sprite: {fileID: 21300612, guid: e34a2dd54e347454d83c5e39a9c41a93, type: 3}
+    Flipped: 0
+  - Sprite: {fileID: 21300614, guid: e34a2dd54e347454d83c5e39a9c41a93, type: 3}
+    Flipped: 0
+  - Sprite: {fileID: 21300616, guid: e34a2dd54e347454d83c5e39a9c41a93, type: 3}
+    Flipped: 0
+  - Sprite: {fileID: 21300618, guid: e34a2dd54e347454d83c5e39a9c41a93, type: 3}
+    Flipped: 0
+  - Sprite: {fileID: 21300620, guid: e34a2dd54e347454d83c5e39a9c41a93, type: 3}
+    Flipped: 0
+  - Sprite: {fileID: 21300622, guid: e34a2dd54e347454d83c5e39a9c41a93, type: 3}
+    Flipped: 0
+  - Sprite: {fileID: 21300624, guid: e34a2dd54e347454d83c5e39a9c41a93, type: 3}
+    Flipped: 0
+  - Sprite: {fileID: 21300626, guid: e34a2dd54e347454d83c5e39a9c41a93, type: 3}
+    Flipped: 0
+  - Sprite: {fileID: 21300628, guid: e34a2dd54e347454d83c5e39a9c41a93, type: 3}
+    Flipped: 0

@@ -14,7 +14,8 @@ public static class ResourcePath
         public const string WalkingAnim = "Walking";
         public const string JumpAnim = "Jump";
         public const string JumpFallAnim = "JumpFall";
-        public const string GetItem = "GetItem";
+        public const string GetItemAnim = "GetItem";
+        public const string DizzyAnim = "Dizzy";
     }
 
     public static class Sprites

@@ -62,7 +62,7 @@ public static class CharacterStates
 
             CurMoveAmt = Vector3.zero;
 
-            //NOTE: Fetch the speed value from somewhere else
+            //Kimimaru - NOTE: Fetch the speed value from somewhere else
             float speed = .1f;
 
             if (Input.GetKey(KeyCode.UpArrow) == true)
