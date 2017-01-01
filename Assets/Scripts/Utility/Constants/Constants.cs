@@ -41,6 +41,22 @@ public static class Constants
         Standard, Stackable, KeyItem
     }
 
+    /// <summary>
+    /// The types of maps
+    /// </summary>
+    public enum MapType
+    {
+        Normal, Pvp, PvpNoPenalty, Minigame, Event
+    }
+
+    /// <summary>
+    /// The types of tiles
+    /// </summary>
+    public enum TileType
+    {
+        Normal, Block, Warp, NpcAvoid
+    }
+
     #endregion
 
     #region Fields
