@@ -28,4 +28,9 @@ public static class ResourcePath
         public const string MusicPath = "Audio/Music/";
         public const string SFXPath = "Audio/SFX/";
     }
+
+    public static class VFX
+    {
+        public const string MapFade = "Prefabs/MapFade";
+    }
 }
