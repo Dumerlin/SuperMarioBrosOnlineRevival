@@ -10,12 +10,10 @@ using System.Linq;
 [DisallowMultipleComponent]
 public class Tile : MonoBehaviour
 {
-    private const int SIZE_X = 32;
-    private const int SIZE_Y = 32;
+    public const int SIZE_X = 32;
+    public const int SIZE_Y = 32;
 
     public SpriteRenderer spriteRenderer = null;
-
-    private Vector2 Size = new Vector2(SIZE_X, SIZE_Y);
 
     public Constants.TileType Type = Constants.TileType.Normal;
     public Sprite Sprite = null;
@@ -24,6 +22,10 @@ public class Tile : MonoBehaviour
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+
+        // Place the tile under Mario by default
+        // Note: hydrakiller4000 - Later we'll need to set this dynamically (Mask, Mask 2, Fringe, etc.)
+        spriteRenderer.sortingOrder = -1;
     }
 
     public void AddDecal(Decal decal)

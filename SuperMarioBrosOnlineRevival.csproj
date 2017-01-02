@@ -76,8 +76,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Attributes\AddedAtRuntimeAttribute.cs" />
+    <Compile Include="Assets\Scripts\Camera\FollowPlayer.cs" />
     <Compile Include="Assets\Scripts\Items\Item.cs" />
     <Compile Include="Assets\Scripts\Items\StackableItem.cs" />
+    <Compile Include="Assets\Scripts\Maps\CreateMap.cs" />
     <Compile Include="Assets\Scripts\Maps\Decal.cs" />
     <Compile Include="Assets\Scripts\Maps\Map.cs" />
     <Compile Include="Assets\Scripts\Maps\Tile.cs" />

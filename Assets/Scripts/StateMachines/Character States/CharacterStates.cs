@@ -63,7 +63,7 @@ public static class CharacterStates
             CurMoveAmt = Vector3.zero;
 
             //Kimimaru - NOTE: Fetch the speed value from somewhere else
-            float speed = .03f;
+            float speed = .05f;
 
             if (Input.GetKey(KeyCode.UpArrow) == true)
             {
@@ -92,7 +92,7 @@ public static class CharacterStates
             //Set the direction to face
             playerDirection.SetDirection(PlayerDirection.GetDirectionFromSpeed(new Vector2(CurMoveAmt.x, CurMoveAmt.y), playerDirection.CurDirection));
 
-            StateMachine.transform.position += CurMoveAmt;
+            StateMachine.RootTransform.position += CurMoveAmt;
         }
 
         protected void PlayerDirectionChangedEvent(PlayerDirection.FacingDirections newDirection)

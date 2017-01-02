@@ -33,6 +33,8 @@ public class PlayerCharacter : MonoBehaviour
     public string AccountName = "TestAccount";
     public string CharacterName = "Test";
 
+    public PlayerDirection Direction { get; private set; }
+
     private void Awake()
     {
         //Ensure only one instance exists
@@ -45,6 +47,8 @@ public class PlayerCharacter : MonoBehaviour
         {
             Destroy(this);
         }
+
+        Direction = GetComponentInChildren<PlayerDirection>();
     }
 
     private void OnDestroy()

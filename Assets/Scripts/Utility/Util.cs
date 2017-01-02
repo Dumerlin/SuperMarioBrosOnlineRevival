@@ -18,4 +18,6 @@ public static class Util
     {
         return value < min ? min : value > max ? max : value;
     }
+
+    public static readonly System.Random RandNum = new System.Random();
 }

@@ -22,6 +22,16 @@ public class AnimStateMachine : MonoBehaviour
     /// </summary>
     public string CurStateName { get; private set; }
 
+    /// <summary>
+    /// The transform of the object that is being animated
+    /// </summary>
+    public Transform RootTransform { get; private set; }
+
+    private void Awake()
+    {
+        RootTransform = transform.root.transform;
+    }
+
     private void Start()
     {
         AnimManager = GetComponent<AnimationManager>();
