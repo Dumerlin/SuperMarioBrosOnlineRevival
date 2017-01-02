@@ -25,4 +25,18 @@ public static class Extensions
     }
 
     #endregion
+
+    #region Rect Extensions
+
+    public static Rect DivideBy(this Rect rect, float number)
+    {
+        float x = rect.x / number;
+        float y = rect.y / number;
+        float width = rect.width / number;
+        float height = rect.height / number;
+
+        return new Rect(x, y, width, height);
+    }
+
+    #endregion
 }

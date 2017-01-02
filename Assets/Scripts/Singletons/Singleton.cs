@@ -35,7 +35,11 @@ public abstract class Singleton<T> : MonoBehaviour where T : MonoBehaviour
             if (instance == null)
             {
                 T prefab = Resources.Load<T>("Prefabs/" + typeof(T).Name);
-                instance = Instantiate<T>(prefab);
+
+                if (prefab != null)
+                {
+                    instance = Instantiate<T>(prefab);
+                }
             }
 
             //The instance can't be found, so create it

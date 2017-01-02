@@ -12,11 +12,15 @@ public class Decal : MonoBehaviour
     private const int DEFAULT_SIZE_X = 16;
     private const int DEFAULT_SIZE_Y = 16;
 
-    public Sprite Sprite = null;
-    public long ZIndex = 0;
+    public SpriteRenderer spriteRenderer = null;
 
-    /// <summary>
-    /// The tile to which the decal belongs
-    /// </summary>
-    public Tile Tile;
+    public Sprite Sprite = null;
+    public int ZIndex = 0;
+
+    private void Awake()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+
+        spriteRenderer.sortingOrder = ZIndex;
+    }
 }

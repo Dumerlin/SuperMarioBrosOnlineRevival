@@ -34,6 +34,7 @@ public class PlayerCharacter : MonoBehaviour
     public string CharacterName = "Test";
 
     public PlayerDirection Direction { get; private set; }
+    public readonly float BaseMoveSpeed = .05f;
 
     private void Awake()
     {

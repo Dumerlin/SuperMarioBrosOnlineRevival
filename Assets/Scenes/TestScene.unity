@@ -122,6 +122,10 @@ MonoBehaviour:
   Title: 
   Type: 0
   Size: {x: 32, y: 32}
+  TopMapID: 0
+  LeftMapID: 0
+  BottomMapID: 0
+  RightMapID: 0
 --- !u!4 &43270092
 Transform:
   m_ObjectHideFlags: 0
@@ -347,26 +351,6 @@ Prefab:
     - target: {fileID: 4358430520038890, guid: 26c212dd1940a4646ba4972ccd3a02c6, type: 2}
       propertyPath: m_RootOrder
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1160448732093732, guid: 26c212dd1940a4646ba4972ccd3a02c6, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4190504660655096, guid: 26c212dd1940a4646ba4972ccd3a02c6, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4190504660655096, guid: 26c212dd1940a4646ba4972ccd3a02c6, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4190504660655096, guid: 26c212dd1940a4646ba4972ccd3a02c6, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4190504660655096, guid: 26c212dd1940a4646ba4972ccd3a02c6, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 26c212dd1940a4646ba4972ccd3a02c6, type: 2}

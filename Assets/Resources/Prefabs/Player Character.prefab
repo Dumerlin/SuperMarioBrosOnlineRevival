@@ -59,7 +59,7 @@ Transform:
   m_GameObject: {fileID: 1986952734590542}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4358430520038890}
   m_RootOrder: 0
@@ -71,7 +71,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1160448732093732}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.16, y: 0.5177567, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4190504660655096}
@@ -142,8 +142,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b65fa0ec6d97fc4b89e27063d9b2047, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Coins: 0
-  Items: []
 --- !u!114 &114625145021938918
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -155,7 +153,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03a7b719170cbef448a054345c8a6eff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Level: 1
+  MaxHP: 5
   HP: 0
+  MaxFP: 5
   FP: 0
   Attack: 0
   Defense: 0

@@ -1,7 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using System.Linq;
 
 /// <summary>
 /// A tile on a map
@@ -28,19 +26,17 @@ public class Tile : MonoBehaviour
         spriteRenderer.sortingOrder = -1;
     }
 
-    public void AddDecal(Decal decal)
+    public void AddDecal(Sprite sprite, int zIndex)
     {
-        decal.Tile = this;
+        GameObject decalComponent = new GameObject("Decal");
+        Decal decal = decalComponent.AddComponent<Decal>();
+
+        decalComponent.transform.SetParent(transform);
+
+        decal.Sprite = Sprite;
+        decal.spriteRenderer.sprite = Sprite;
+        decal.ZIndex = zIndex;
+
         Decals.Add(decal);
-    }
-
-    private void DisplayDecals()
-    {
-        List<Decal> orderedDecals = Decals.OrderByDescending(d => d.ZIndex).ToList();
-
-        foreach (Decal decal in orderedDecals)
-        {
-
-        }
     }
 }
